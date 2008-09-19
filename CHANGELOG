@@ -1,5 +1,6 @@
 
 Sep 19
+- Target: optional VM/Runtime
 - Target: add impl version; use Ruby MRI version instead of RubySpec version (brixen)
 - show Targets and Results publicly
 - list latest results on the front page

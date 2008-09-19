@@ -1,4 +1,7 @@
 <%=h @target.arch %><br/>
 <%=h @target.os %><br/>
+<% unless @target.vm.blank? -%>
+<%=h @target.vm %><br/>
+<% end -%>
 <%=h @target.impl %> <%=h @target.impl_version %><br/>
 Ruby <%=h @target.ruby_version %>

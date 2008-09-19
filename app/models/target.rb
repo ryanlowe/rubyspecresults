@@ -14,7 +14,7 @@ class Target < ActiveRecord::Base
   validates_presence_of   :arch
   validates_presence_of   :os
   
-  attr_accessible :impl, :impl_version, :ruby_version, :arch, :os, :continuous, :notes
+  attr_accessible :impl, :impl_version, :ruby_version, :arch, :os, :vm, :continuous, :notes
   
   def before_validation
     self[:secret] = generate_secret(6) if self.new_record?
@@ -23,6 +23,7 @@ class Target < ActiveRecord::Base
     self[:ruby_version].strip! unless self[:ruby_version].nil?
     self[:arch].strip!         unless self[:arch].nil?
     self[:os].strip!           unless self[:os].nil?
+    self[:vm].strip!           unless self[:vm].nil?
     self[:notes].strip!        unless self[:notes].nil?
   end
   
@@ -33,6 +34,12 @@ class Target < ActiveRecord::Base
   def created_by?(user)
     return false if user.nil?
     (user.id == self.created_by)
+  end
+  
+  def platform
+    text = arch+" "+os
+    text += vm unless vm.nil? or vm.length < 1
+    text
   end
   
   def to_s

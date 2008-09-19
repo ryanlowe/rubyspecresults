@@ -17,3 +17,9 @@ OPERATING_SYSTEMS = [
                     "Mac OS X 10.4",
                     "Mac OS X 10.5"
                     ]
+                    
+VIRTUAL_MACHINES = [
+                    "Java VM",
+                    "V8",
+                    ".NET CLR"
+                   ]

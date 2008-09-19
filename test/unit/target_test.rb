@@ -46,6 +46,7 @@ class TargetTest < ActiveSupport::TestCase
     t.ruby_version = ' 1.8.6 '
     t.arch = ' Intel Core 2 Duo '
     t.os = ' Mac OS X 10.5.4 '
+    t.vm = ' Java '
     t.notes = ' This is special. '
     
     assert t.save
@@ -56,6 +57,7 @@ class TargetTest < ActiveSupport::TestCase
     assert_equal '1.8.6', t.ruby_version
     assert_equal 'Intel Core 2 Duo', t.arch
     assert_equal 'Mac OS X 10.5.4', t.os
+    assert_equal 'Java', t.vm
     assert_equal 'This is special.', t.notes
   end
   

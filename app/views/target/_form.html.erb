@@ -16,6 +16,9 @@
 <p><label for="target_os">Operating System</label>
 <%= select 'target', 'os', OPERATING_SYSTEMS.sort, :include_blank => true %></p>
 
+<p><label for="target_vm">Virtual Machine/Runtime</label>
+<%= select 'target', 'vm', VIRTUAL_MACHINES.sort, :include_blank => true %></p>
+
 <p><label for="target_notes">Notes (optional)</label><br/>
 <%= text_area 'target', 'notes', :size => "60x6" %></p>
 
