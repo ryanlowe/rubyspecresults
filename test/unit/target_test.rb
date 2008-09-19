@@ -18,15 +18,15 @@ class TargetTest < ActiveSupport::TestCase
     assert_equal 6, t.errors.size
     assert t.errors.on(:creator)
     assert t.errors.on(:impl)
-    assert t.errors.on(:impl_branch)
-    assert t.errors.on(:spec_version)
+    assert t.errors.on(:impl_version)
+    assert t.errors.on(:ruby_version)
     assert t.errors.on(:arch)
     assert t.errors.on(:os)
     
     t.creator = users(:ryanlowe)
     t.impl = 'MRI'
-    t.impl_branch = '1.8.6'
-    t.spec_version = '1.8'
+    t.impl_version = '1.8.6'
+    t.ruby_version = '1.8.6'
     t.arch = 'Intel Core 2 Duo'
     t.os = 'Mac OS X 10.5.4'
     
@@ -42,8 +42,8 @@ class TargetTest < ActiveSupport::TestCase
     t = Target.new
     t.creator = users(:ryanlowe)
     t.impl = ' MRI '
-    t.impl_branch = ' 1.8.6 '
-    t.spec_version = ' 1.8 '
+    t.impl_version = ' 1.8.6 '
+    t.ruby_version = ' 1.8.6 '
     t.arch = ' Intel Core 2 Duo '
     t.os = ' Mac OS X 10.5.4 '
     t.notes = ' This is special. '
@@ -52,8 +52,8 @@ class TargetTest < ActiveSupport::TestCase
     assert_equal target_count+1, Target.count
     
     assert_equal 'MRI', t.impl
-    assert_equal '1.8.6', t.impl_branch
-    assert_equal '1.8', t.spec_version
+    assert_equal '1.8.6', t.impl_version
+    assert_equal '1.8.6', t.ruby_version
     assert_equal 'Intel Core 2 Duo', t.arch
     assert_equal 'Mac OS X 10.5.4', t.os
     assert_equal 'This is special.', t.notes

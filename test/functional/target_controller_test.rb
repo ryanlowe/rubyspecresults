@@ -142,7 +142,7 @@ class TargetControllerTest < ActionController::TestCase
     target_count = Target.count
     login_as :ryanlowe
     
-    post :create, :target => { :impl => "MacRuby", :impl_branch => "HEAD", :spec_version => "1.8", :arch => "Intel Core 2 Duo", :os => "Mac OS X 10.5.4" }
+    post :create, :target => { :impl => "MacRuby", :impl_version => "0.3.0", :ruby_version => "1.8.6", :arch => "Intel Core 2 Duo", :os => "Mac OS X 10.5.4" }
     
     assert_equal target_count+1, Target.count
     t = Target.last

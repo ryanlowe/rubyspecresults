@@ -10,7 +10,7 @@
       <td>Arch</td>
       <td>OS</td>
       <td>Impl</td>
-      <td>Spec</td>
+      <td>Ruby</td>
       <td>Files</td>
       <td>Exam</td>
       <td>Expe</td>
@@ -24,8 +24,8 @@
       <td><%= link_profile(target.creator) %></td>
       <td><%=h target.arch %></td>
       <td><%=h target.os %></td>
-      <td><%=h target.impl %> <%=h target.impl_branch %></td>
-      <td><%=h target.spec_version %></td>
+      <td><%=h target.impl %> <%=h target.impl_version %></td>
+      <td><%=h target.ruby_version %></td>
 <% if target.last_result.nil? -%>
       <td colspan="6">&nbsp;</td>
 <% else -%>
