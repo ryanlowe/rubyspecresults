@@ -1,5 +1,6 @@
 
 Sep 19
+- show Targets and Results publicly
 - list latest results on the front page
 - can add/edit Results
 = add Result controller

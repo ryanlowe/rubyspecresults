@@ -1,4 +1,8 @@
-<p>
-  Some information about <%=h @user.username %>
-</p>
-<%= render :partial => 'profile/actions' %>
+<h2>Targets</h2>
+<div>
+  <ul>
+<% for target in @user.targets -%>
+    <li><%= public_link_target(target) -%></li>
+<% end -%>
+  </ul>
+</div>

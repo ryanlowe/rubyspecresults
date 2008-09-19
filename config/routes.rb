@@ -65,6 +65,12 @@ ActionController::Routing::Routes.draw do |map|
   
   ### PUBLIC AREAS
   
+  #public
+  map.with_options :controller => "public" do |public_c|
+    public_c.connect '/target/:id', :action => 'target'
+    public_c.connect '/result/:id', :action => 'result'
+  end
+  
   #profile
   map.with_options :controller => "profile" do |profile|
     profile.connect '/person/:username', :action => 'user'

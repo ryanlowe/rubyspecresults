@@ -3,7 +3,7 @@ module AuthenticatedSystem
   protected
   
     def launched?
-      false
+      true
     end
   
     # Returns true or false if the user is logged in.

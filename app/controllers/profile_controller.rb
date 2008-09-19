@@ -1,5 +1,6 @@
 class ProfileController < ApplicationController
-
+  helper :public
+  
   def user
     @user = User.find_by_username(params[:username])
     raise ActiveRecord::RecordNotFound if @user.nil?
