@@ -1,6 +1,7 @@
-set :application, "rubybuild.org"
+set :application, "rubyspecresults.org"
 set :project, "rubybuild"
-set :user, "deploy"
+set :user, "ryanlowe"
+set :use_sudo, false
 
 default_run_options[:pty] = true
 set :repository,  "git@github.com:ryanlowe/#{project}.git"
