@@ -1,14 +1,14 @@
 
 development:
   adapter: mysql
-  database: rubybuild_dev
+  database: rubyspecresults_dev
   host: localhost
   username: root
   password:
 
 test:
   adapter: mysql
-  database: rubybuild_test
+  database: rubyspecresults_test
   host: localhost
   username: root
   password:

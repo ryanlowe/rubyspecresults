@@ -1,5 +1,5 @@
 set :application, "rubyspecresults.org"
-set :project, "rubybuild"
+set :project, "rubyspecresults"
 set :user, "ryanlowe"
 set :use_sudo, false
 
