@@ -12,10 +12,4 @@
 <p>
   <%= link_to 'Add a Result', :controller => 'result', :action => 'new', :target_id => @target %>
 </p>
-<div>
-  <ul>
-<% for result in @target.results -%>
-    <li><%= link_result(result) -%></li>
-<% end -%>
-  </ul>
-</div>
+<%= render :partial => 'target/results' %>

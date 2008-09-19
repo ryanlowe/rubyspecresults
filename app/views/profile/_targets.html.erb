@@ -1,7 +1,6 @@
 <div>
   <table class="bordered">
     <tr class="header">
-      <td rowspan="2">Who</td>
       <td colspan="2">Target</td>
       <td colspan="6">Last Result</td>
     </tr>
@@ -26,7 +25,6 @@
 <%     current_arch = target.arch -%>
 <%   end -%>
     <tr>
-      <td><%= link_profile(target.creator) %></td>
       <td>
         <%=h target.impl %> <%=h target.impl_version %>
 <% unless target.vm.blank? -%>

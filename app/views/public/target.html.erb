@@ -9,10 +9,6 @@
 <% if @target.results.size < 1 -%>
   No results yet
 <% else -%>
-  <ul>
-<%   for result in @target.results -%>
-    <li><%= public_link_result(result) -%></li>
-<%   end -%>
-  </ul>
+<%= render :partial => 'public/results' %>
 <% end -%>
 </div>

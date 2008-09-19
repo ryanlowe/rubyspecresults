@@ -1,0 +1,22 @@
+<div>
+  <table class="bordered">
+    <tr class="header">
+      <td></td>
+      <td>Files</td>
+      <td>Examples</td>
+      <td>Expectations</td>
+      <td>Failures</td>
+      <td>Errors</td>
+    </tr>
+<% for result in @target.results -%>
+    <tr>
+      <td><%= link_result(result) %></td>
+      <td><%=h result.files_count %></td>
+      <td><%=h result.examples_count %></td>
+      <td><%=h result.expectations_count %></td>
+      <td><%=h result.failures_count %></td>
+      <td><%=h result.errors_count %></td>
+    </tr>
+<% end -%>
+  </table>
+</div>
