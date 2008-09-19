@@ -1,4 +1,38 @@
-Welcome!
-
-<h2>Login</h2>
-<%= render :partial => 'account/login' %>
+<div>
+  <table class="bordered">
+    <tr class="header">
+      <td rowspan="2">Who</td>
+      <td colspan="4">Target</td>
+      <td colspan="5">Last Result</td>
+    </tr>
+    <tr class="header">
+      <td>Arch</td>
+      <td>OS</td>
+      <td>Impl</td>
+      <td>Spec</td>
+      <td>Files</td>
+      <td>Exam</td>
+      <td>Expe</td>
+      <td>Fail</td>
+      <td>Err</td>
+    </tr>
+<% for target in Target.find(:all) -%>
+    <tr>
+      <td><%= link_profile(target.creator) %></td>
+      <td><%=h target.arch %></td>
+      <td><%=h target.os %></td>
+      <td><%=h target.impl %> <%=h target.impl_branch %></td>
+      <td><%=h target.spec_version %></td>
+<% if target.last_result.nil? -%>
+      <td colspan="5">&nbsp;</td>
+<% else -%>
+      <td><%=h target.last_result.files_count %></td>
+      <td><%=h target.last_result.examples_count %></td>
+      <td title="Expectations"><%=h target.last_result.expectations_count %></td>
+      <td><%=h target.last_result.failures_count %></td>
+      <td><%=h target.last_result.errors_count %></td>
+<% end -%>
+    </tr>
+<% end -%>
+  </table>
+</div>

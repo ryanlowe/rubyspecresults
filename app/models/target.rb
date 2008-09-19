@@ -5,6 +5,7 @@ class Target < ActiveRecord::Base
   validates_existence_of :creator
   
   has_many :results
+  has_one :last_result, :class_name => "Result", :order => "id DESC"
   
   validates_presence_of   :secret
   validates_presence_of   :impl
