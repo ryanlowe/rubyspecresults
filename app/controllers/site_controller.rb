@@ -9,6 +9,7 @@ class SiteController < ApplicationController
   end
 
   def front
+    @targets = Target.find(:all,:order => "os, arch")
   end
 
 end

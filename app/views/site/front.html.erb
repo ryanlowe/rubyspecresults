@@ -2,13 +2,10 @@
   <table class="bordered">
     <tr class="header">
       <td rowspan="2">Who</td>
-      <td colspan="5">Target</td>
+      <td colspan="2">Target</td>
       <td colspan="6">Last Result</td>
     </tr>
     <tr class="header">
-      <td>Arch</td>
-      <td>OS</td>
-      <td>VM/Run</td>
       <td>Implementation</td>
       <td>Ruby</td>
       <td>Files</td>
@@ -18,13 +15,24 @@
       <td>Err</td>
       <td>More</td>
     </tr>
-<% for target in Target.find(:all) -%>
+<% current_os = nil -%>
+<% current_arch = nil -%>
+<% for target in @targets -%>
+<%   unless (current_os == target.os) and (current_arch == target.arch) -%>
+    <tr>
+      <td colspan="13"><h2><%=h target.os %> (<%=h target.arch %>)</h2></td>
+    </tr>
+<%     current_os = target.os -%>
+<%     current_arch = target.arch -%>
+<%   end -%>
     <tr>
       <td><%= link_profile(target.creator) %></td>
-      <td><%=h target.arch %></td>
-      <td><%=h target.os %></td>
-      <td><%=h target.vm %></td>
-      <td><%=h target.impl %> <%=h target.impl_version %></td>
+      <td>
+        <%=h target.impl %> <%=h target.impl_version %>
+<% unless target.vm.blank? -%>
+        (<%=h target.vm %>)
+<% end %>
+      </td>
       <td><%=h target.ruby_version %></td>
 <% if target.last_result.nil? -%>
       <td colspan="6">&nbsp;</td>
