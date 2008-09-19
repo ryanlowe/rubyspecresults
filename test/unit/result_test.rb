@@ -4,7 +4,7 @@ class ResultTest < ActiveSupport::TestCase
   fixtures :users, :targets, :results
 
   def test_fixtures
-    assert true
+    assert results(:ryanlowe_mri_head1).valid?
   end
   
   def test_required_fields

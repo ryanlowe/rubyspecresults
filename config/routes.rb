@@ -43,6 +43,16 @@ ActionController::Routing::Routes.draw do |map|
   
   ###
   
+  #result
+  map.with_options :controller => "result" do |result|
+    result.connect '/my/target/:target_id/results', :action => 'target'
+    result.connect '/my/result/:id',                :action => 'show'
+    result.connect '/target/:target_id/new/result',    :action => 'new'
+    result.connect '/target/:target_id/create/result', :action => 'create'
+    result.connect '/edit/result/:id',           :action => 'edit'
+    result.connect '/update/result/:id',         :action => 'update'
+  end
+  
   #target
   map.with_options :controller => "target" do |target|
     target.my_targets '/my/targets',        :action => 'list'

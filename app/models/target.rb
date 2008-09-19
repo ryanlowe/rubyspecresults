@@ -4,6 +4,8 @@ class Target < ActiveRecord::Base
   belongs_to :creator, :class_name => "User", :foreign_key => "created_by"
   validates_existence_of :creator
   
+  has_many :results
+  
   validates_presence_of   :secret
   validates_presence_of   :impl
   validates_presence_of   :impl_branch

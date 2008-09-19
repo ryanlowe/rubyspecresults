@@ -1,7 +1,9 @@
 
 Sep 19
+- can add/edit Results
+= add Result controller
 = add Result model
-- can add/edit targets
+- can add/edit Targets
 = add Target controller
 = add Target model
 

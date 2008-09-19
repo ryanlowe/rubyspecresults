@@ -1,7 +1,11 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# one:
-#   column: value
-#
-# two:
-#   column: value
+ryanlowe_mri_head1:
+  id: 500001
+  created_by: 100001 #ryanlowe
+  target_id: 400001 #ryanlowe_mri_head
+  log: 2487 files, 9169 examples, 30818 expectations, 13 failures, 17 errors
+  files_count: 0
+  examples_count: 0
+  expectations_count: 0
+  failures_count: 0
+  errors_count: 0
+  

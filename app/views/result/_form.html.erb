@@ -1,0 +1,23 @@
+<%= error_messages_for 'result' %>
+
+<!--[form:result]-->
+
+<p><label for="result_log">Log</label><br/>
+<%= text_area 'result', 'log', :size => "100x16" %></p>
+
+<p><label for="result_files_count">Files</label><br/>
+<%= text_field 'result', 'files_count'  %></p>
+
+<p><label for="result_examples_count">Examples</label><br/>
+<%= text_field 'result', 'examples_count'  %></p>
+
+<p><label for="result_expectations_count">Expectations</label><br/>
+<%= text_field 'result', 'expectations_count'  %></p>
+
+<p><label for="result_failures_count">Failures</label><br/>
+<%= text_field 'result', 'failures_count'  %></p>
+
+<p><label for="result_errors_count">Errors</label><br/>
+<%= text_field 'result', 'errors_count'  %></p>
+
+<!--[eoform:result]-->

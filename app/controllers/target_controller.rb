@@ -1,4 +1,5 @@
 class TargetController < ApplicationController
+  helper :result
   
   before_filter :login_required
 

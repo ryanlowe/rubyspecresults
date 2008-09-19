@@ -1,0 +1,14 @@
+<p><%= link_to 'Edit this Result', :action => 'edit', :id => @result %></p>
+<p>
+<%= render :partial => 'target/summary' %>
+</p>
+<p>
+  <%= @result.files_count %> Files<br/>
+  <%= @result.examples_count %> Examples<br/>
+  <%= @result.expectations_count %> Expectations<br/>
+  <%= @result.failures_count %> Failures<br/>
+  <%= @result.errors_count %> Errors<br/>
+</p>
+<div class="log">
+  <%= EasyFormat.format(@result.log) %>
+</div>

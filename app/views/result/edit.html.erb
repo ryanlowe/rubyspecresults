@@ -1,0 +1,7 @@
+<div class="edit">
+  <%= link_result(@result,"Cancel Edit") %>
+</div>
+<% form_tag :controller => 'result', :action => 'update', :id => @target do %>
+<%= render :partial => 'result/form' %>
+  <%= submit_tag "Save Changes" %>
+<% end %>

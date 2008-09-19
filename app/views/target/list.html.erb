@@ -2,9 +2,9 @@
   <%= link_to 'Add a Target', new_target_url %>
 </p>
 <div>
+  <ul>
 <% for target in @targets -%>
-  <div>
-    <%= link_target(target) -%>
-  </div>
+    <li><%= link_target(target) -%></li>
 <% end -%>
+  </ul>
 </div>

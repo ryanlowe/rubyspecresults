@@ -28,3 +28,5 @@ table.bordered        { border-collapse:collapse; }
   #flash        { border:2px solid red;padding:0.5em;margin:1em 0; }
   #content { border:1px solid #eee;margin:1em 0;padding:1em 0;border-top:2px solid #ccc;border-bottom:2px solid #ccc; }
   #footer { text-align:center;margin-bottom:8em; }
+  
+div.log {font-family:monospace;overflow:hidden;}

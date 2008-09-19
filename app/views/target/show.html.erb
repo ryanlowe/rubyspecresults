@@ -1,13 +1,21 @@
-<p><%= link_to 'Edit this Target', :action => 'edit', :id => @target %>
+<p><%= link_to 'Edit this Target', :action => 'edit', :id => @target %></p>
 <p>
   <b>SECRET: <%=h @target.secret %></b>
 </p>
 <p>
-  <%=h @target.impl %> <%=h @target.impl_branch %><br/>
-  RubySpec <%=h @target.spec_version %><br/>
-  <%=h @target.arch %><br/>
-  <%=h @target.os %>
+<%= render :partial => 'target/summary' %>
 </p>
 <p>
   <%= EasyFormat.format(@target.notes) %>
 </p>
+<h2>Results</h2>
+<p>
+  <%= link_to 'Add a Result', :controller => 'result', :action => 'new', :target_id => @target %>
+</p>
+<div>
+  <ul>
+<% for result in @target.results -%>
+    <li><%= link_result(result) -%></li>
+<% end -%>
+  </ul>
+</div>
