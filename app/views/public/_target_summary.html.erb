@@ -1,5 +1,4 @@
-<%=h @target.arch %><br/>
-<%=h @target.os %><br/>
+<%=h @target.os %> (<%=h @target.arch %>)<br/>
 <% unless @target.vm.blank? -%>
 <%=h @target.vm %><br/>
 <% end -%>
