@@ -2,13 +2,14 @@
   <table class="bordered">
     <tr class="header">
       <td rowspan="2">Who</td>
-      <td colspan="4">Target</td>
+      <td colspan="5">Target</td>
       <td colspan="6">Last Result</td>
     </tr>
     <tr class="header">
       <td>Arch</td>
       <td>OS</td>
-      <td>Impl</td>
+      <td>VM/Run</td>
+      <td>Implementation</td>
       <td>Ruby</td>
       <td>Files</td>
       <td>Exam</td>
@@ -22,6 +23,7 @@
       <td><%= link_profile(target.creator) %></td>
       <td><%=h target.arch %></td>
       <td><%=h target.os %></td>
+      <td><%=h target.vm %></td>
       <td><%=h target.impl %> <%=h target.impl_version %></td>
       <td><%=h target.ruby_version %></td>
 <% if target.last_result.nil? -%>
