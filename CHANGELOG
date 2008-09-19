@@ -1,5 +1,6 @@
 
 Sep 18
+= add jump_off baseline project
 = add jump_off vendor/plugins
 = add jump_off vendor/gems
 = add Rails 2.1.1 to vendor/rails
