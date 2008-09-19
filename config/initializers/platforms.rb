@@ -15,7 +15,8 @@ OPERATING_SYSTEMS = [
                     "Ubuntu 8.04 LTS",
                     "Mac OS X 10.3",
                     "Mac OS X 10.4",
-                    "Mac OS X 10.5"
+                    "Mac OS X 10.5",
+                    "Gentoo"
                     ]
                     
 VIRTUAL_MACHINES = [
