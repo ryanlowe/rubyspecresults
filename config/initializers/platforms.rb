@@ -11,9 +11,9 @@ ARCHS = [
 OPERATING_SYSTEMS = [
                     "Windows XP",
                     "Windows Vista",
-                    "Ubuntu 7.10 (Gutsy)",
-                    "Ubuntu 8.04 LTS (Hardy)",
-                    "Mac OS 10.3 (Panther)",
-                    "Mac OS 10.4 (Tiger)",
-                    "Mac OS 10.5 (Leopard)"
+                    "Ubuntu 7.10",
+                    "Ubuntu 8.04 LTS",
+                    "Mac OS X 10.3",
+                    "Mac OS X 10.4",
+                    "Mac OS X 10.5"
                     ]
