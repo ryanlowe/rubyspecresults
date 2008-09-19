@@ -1,7 +1,18 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# one:
-#   column: value
-#
-# two:
-#   column: value
+ryanlowe_mri_head:
+  id: 400001
+  created_by: 100001 #ryanlowe
+  secret: 123456
+  impl: MRI
+  impl_branch: HEAD
+  spec_version: 1.9
+  arch: Intel Core 2 Duo
+  os: Mac OS X 10.5.4
+ryanlowe_rbx_head:
+  id: 400002
+  created_by: 100001 #ryanlowe
+  secret: abcdef
+  impl: Rubinius
+  impl_branch: HEAD
+  spec_version: 1.8
+  arch: Intel Core 2 Duo
+  os: Mac OS X 10.5.4

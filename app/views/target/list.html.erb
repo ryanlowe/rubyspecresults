@@ -1,0 +1,10 @@
+<p>
+  <%= link_to 'Add a Target', new_target_url %>
+</p>
+<div>
+<% for target in @targets -%>
+  <div>
+    <%= link_target(target) -%>
+  </div>
+<% end -%>
+</div>

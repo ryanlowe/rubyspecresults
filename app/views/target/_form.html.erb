@@ -1,0 +1,32 @@
+<%= error_messages_for 'target' %>
+
+<!--[form:target]-->
+<p><label for="target_impl">Ruby Implementation</label><br/>
+<%= text_field 'target', 'impl'  %>
+ie. MRI, Rubinius, MacRuby
+</p>
+
+<p><label for="target_impl_branch">Ruby Implementation Branch</label><br/>
+<%= text_field 'target', 'impl_branch'  %>
+ie. HEAD, trunk, 1.8.6
+</p>
+
+<p><label for="target_spec_version">RubySpec Version</label><br/>
+<%= text_field 'target', 'spec_version'  %>
+1.8 or 1.9
+</p>
+
+<p><label for="target_arch">Architecture</label><br/>
+<%= text_field 'target', 'arch'  %>
+ie. PowerPC, AMD, Intel Core 2 Duo
+</p>
+
+<p><label for="target_os">Operating System</label><br/>
+<%= text_field 'target', 'os'  %>
+ie. Mac OS X 10.5.4, Ubuntu 8.04 LTS (Hardy), Windows XP
+</p>
+
+<p><label for="target_notes">Notes (optional)</label><br/>
+<%= text_area 'target', 'notes', :size => "60x6" %></p>
+
+<!--[eoform:target]-->

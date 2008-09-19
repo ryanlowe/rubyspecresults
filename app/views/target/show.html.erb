@@ -1,0 +1,13 @@
+<p><%= link_to 'Edit this Target', :action => 'edit', :id => @target %>
+<p>
+  <b>SECRET: <%=h @target.secret %></b>
+</p>
+<p>
+  <%=h @target.impl %> <%=h @target.impl_branch %><br/>
+  RubySpec <%=h @target.spec_version %><br/>
+  <%=h @target.arch %><br/>
+  <%=h @target.os %>
+</p>
+<p>
+  <%= EasyFormat.format(@target.notes) %>
+</p>

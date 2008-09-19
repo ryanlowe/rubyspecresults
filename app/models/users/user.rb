@@ -14,6 +14,12 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   
   has_one :preference_store
+  
+  ###
+  
+  has_many :targets, :foreign_key => "created_by"
+  
+  ###
 
   # Authenticates a user by their username and unencrypted password.  Returns the user or nil.
   def self.authenticate(username, password)

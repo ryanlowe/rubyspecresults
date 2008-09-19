@@ -6,15 +6,17 @@ class Target < ActiveRecord::Base
   
   validates_presence_of   :secret
   validates_presence_of   :impl
+  validates_presence_of   :impl_branch
   validates_presence_of   :spec_version
   validates_presence_of   :arch
   validates_presence_of   :os
   
-  attr_accessible :impl, :spec_version, :arch, :os, :continuous, :notes
+  attr_accessible :impl, :impl_branch, :spec_version, :arch, :os, :continuous, :notes
   
   def before_validation
     self[:secret] = generate_secret(6) if self.new_record?
     self[:impl].strip!         unless self[:impl].nil?
+    self[:impl_branch].strip!  unless self[:impl_branch].nil?
     self[:spec_version].strip! unless self[:spec_version].nil?
     self[:arch].strip!         unless self[:arch].nil?
     self[:os].strip!           unless self[:os].nil?

@@ -41,6 +41,18 @@ ActionController::Routing::Routes.draw do |map|
     messages.connect '/undestroy/incoming/:id', :action => 'undestroy'
   end
   
+  ###
+  
+  #target
+  map.with_options :controller => "target" do |target|
+    target.my_targets '/my/targets',        :action => 'list'
+    target.connect    '/my/target/:id',     :action => 'show'
+    target.new_target '/new/target',        :action => 'new'
+    target.connect    '/create/target',     :action => 'create'
+    target.connect    '/edit/target/:id',   :action => 'edit'
+    target.connect    '/update/target/:id', :action => 'update'
+  end
+  
   ### PUBLIC AREAS
   
   #profile

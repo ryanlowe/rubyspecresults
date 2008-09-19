@@ -9,6 +9,7 @@ class CreateTargets < ActiveRecord::Migration
       t.integer  :destroyed_by
       t.string   :secret
       t.string   :impl
+      t.string   :impl_branch
       t.string   :spec_version
       t.string   :arch
       t.string   :os
