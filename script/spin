@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/ryanlowe/rails/rubybuild/current/script/process/spawner -p 12345 -i 1
+/home/ryanlowe/rails/rubyspecresults/current/script/process/spawner -p 12345 -i 1
