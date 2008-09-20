@@ -1,10 +1,4 @@
 <p>
   <%= link_to 'Add a Target', new_target_url %>
 </p>
-<div>
-  <ul>
-<% for target in @targets -%>
-    <li><%= link_target(target) -%></li>
-<% end -%>
-  </ul>
-</div>
+<%= render :partial => 'target/targets' %>

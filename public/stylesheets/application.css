@@ -2,7 +2,7 @@
 body { margin:0;padding:0; }
 body, div, span, td, input, select { font-family:Arial;font-size:10pt; }
 
-h1, h2, h3, h4, h5 { margin:0;padding:0; }
+h1, h2, h3, h4, h5 { margin:0;padding:0;margin-bottom:0.25em; }
 
 a { color:#900;text-decoration:none; }
 a:hover { text-decoration:underline; }
@@ -23,7 +23,7 @@ table.bordered        { border-collapse:collapse; }
     table.bordered td { border:1px solid #999;padding:0.25em 0.5em;white-space:nowrap; }
     table.bordered tr.header td   { text-align:center;padding:0.25em 0.5em;font-weight:bold;background-color:#ccc; }
     table.bordered tr.platform td { background-color:#eee; }
-    table.bordered tr.platform h2 { font-size:12pt; }
+    table.bordered tr.platform h2 { font-size:12pt;margin:0; }
     table.bordered td.smaller     { font-size:8pt; }
     table.bordered td.count       { text-align:right; }
 

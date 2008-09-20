@@ -19,7 +19,7 @@
 <% current_arch = nil -%>
 <% for target in @targets -%>
 <%   unless (current_os == target.os) and (current_arch == target.arch) -%>
-    <tr>
+    <tr class="platform">
       <td colspan="13"><h2><%=h target.os %> (<%=h target.arch %>)</h2></td>
     </tr>
 <%     current_os = target.os -%>

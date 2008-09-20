@@ -7,7 +7,7 @@ class AccountController < ApplicationController
     return unless request.post?
     self.current_user = User.authenticate(params[:username], params[:password])
     if logged_in?
-      redirect_back_or_default(home_url)
+      redirect_back_or_default(my_targets_url)
       flash[:notice] = "Logged in successfully"
     else
       flash[:notice] = "Log in failed: bad username and password combination"
@@ -20,7 +20,7 @@ class AccountController < ApplicationController
     return unless request.post?
     @user.save!
     self.current_user = @user
-    redirect_back_or_default(home_url)
+    redirect_back_or_default(my_targets_url)
     flash[:notice] = "Thanks for signing up! You have been logged in."
   rescue ActiveRecord::RecordInvalid
     render :action => 'signup'

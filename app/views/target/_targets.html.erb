@@ -1,8 +1,6 @@
-<h1>Results</h1>
 <div>
   <table class="bordered">
     <tr class="header">
-      <td rowspan="2">Who</td>
       <td colspan="2">Target</td>
       <td colspan="7">Last Result</td>
     </tr>
@@ -28,9 +26,8 @@
 <%     current_arch = target.arch -%>
 <%   end -%>
     <tr>
-      <td><%= link_profile(target.creator) %></td>
       <td>
-        <%= public_link_target(target,target.implementation) %>
+        <%= link_target(target,target.implementation) %>
       </td>
       <td><%=h target.ruby_version %></td>
 <% if target.last_result.nil? -%>
@@ -42,7 +39,7 @@
       <td class="count"><%=h target.last_result.expectations_count %></td>
       <td class="count"><%=h target.last_result.failures_count %></td>
       <td class="count"><%=h target.last_result.errors_count %></td>
-      <td><%= public_link_result(target.last_result,"More") %></td>
+      <td><%= link_result(target.last_result,"More") %></td>
 <% end -%>
     </tr>
 <% end -%>
