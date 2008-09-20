@@ -3,9 +3,10 @@ require File.dirname(__FILE__) + '/../test_helper'
 class SiteControllerTest < ActionController::TestCase
 
   def test_routing
-    assert '/boom', :controller => 'site', :action => 'boom'
-    assert '',      :controller => 'site', :action => 'front'
-    assert '/',     :controller => 'site', :action => 'front'
+    assert '/boom',  :controller => 'site', :action => 'boom'
+    assert '',       :controller => 'site', :action => 'front'
+    assert '/',      :controller => 'site', :action => 'front'
+    assert '/about', :controller => 'site', :action => 'about'
   end
   
   #
@@ -44,6 +45,26 @@ class SiteControllerTest < ActionController::TestCase
     
     assert_response :success
     assert_template 'front'
+  end
+  
+  #
+  # about
+  #
+  
+  def test_about
+    get :about
+    
+    assert_response :success
+    assert_template 'about'
+  end
+  
+  def test_about
+    launched false
+    
+    get :about
+    
+    assert_response :success
+    assert_template 'about'
   end
 
 end

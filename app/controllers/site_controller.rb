@@ -11,5 +11,9 @@ class SiteController < ApplicationController
   def front
     @targets = Target.find(:all,:order => "os, arch")
   end
+  
+  def about
+    @title = "About RubySpecResults"
+  end
 
 end

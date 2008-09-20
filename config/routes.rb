@@ -2,8 +2,9 @@ ActionController::Routing::Routes.draw do |map|
 
   #site
   map.with_options :controller => "site" do |site|
-    site.connect '/boom', :action => 'boom'
-    site.front   '/',     :action => 'front'
+    site.connect '/boom',  :action => 'boom'
+    site.front   '/',      :action => 'front'
+    site.about   '/about', :action => 'about'
   end
   
   #account

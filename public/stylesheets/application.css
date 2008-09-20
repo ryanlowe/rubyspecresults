@@ -39,4 +39,7 @@ table.bordered        { border-collapse:collapse; }
   #content { order:1px solid #eee;margin:0;padding:1em 0;order-top:2px solid #ccc;border-bottom:1px solid #eee; }
   #footer { color:#999;text-align:center;margin-top:0.5em;margin-bottom:8em; }
   
+div#about     { width:500px; }
+  div#about p { font-size:12pt; }
+
 div.log {font-family:monospace;overflow:hidden;}
