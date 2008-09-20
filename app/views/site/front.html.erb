@@ -3,11 +3,12 @@
     <tr class="header">
       <td rowspan="2">Who</td>
       <td colspan="2">Target</td>
-      <td colspan="6">Last Result</td>
+      <td colspan="7">Last Result</td>
     </tr>
     <tr class="header">
       <td>Implementation</td>
       <td>Ruby</td>
+      <td>Submitted</td>
       <td>Files</td>
       <td>Examples</td>
       <td>Expectations</td>
@@ -19,7 +20,7 @@
 <% current_arch = nil -%>
 <% for target in @targets -%>
 <%   unless (current_os == target.os) and (current_arch == target.arch) -%>
-    <tr>
+    <tr class="platform">
       <td colspan="13"><h2><%=h target.os %> (<%=h target.arch %>)</h2></td>
     </tr>
 <%     current_os = target.os -%>
@@ -27,7 +28,7 @@
 <%   end -%>
     <tr>
       <td><%= link_profile(target.creator) %></td>
-      <td>
+      <td class="smaller">
         <%=h target.impl %> <%=h target.impl_version %>
 <% unless target.vm.blank? -%>
         (<%=h target.vm %>)
@@ -35,13 +36,14 @@
       </td>
       <td><%=h target.ruby_version %></td>
 <% if target.last_result.nil? -%>
-      <td colspan="6">&nbsp;</td>
+      <td colspan="7">&nbsp;</td>
 <% else -%>
-      <td><%=h target.last_result.files_count %></td>
-      <td><%=h target.last_result.examples_count %></td>
-      <td><%=h target.last_result.expectations_count %></td>
-      <td><%=h target.last_result.failures_count %></td>
-      <td><%=h target.last_result.errors_count %></td>
+      <td class="smaller"><%=h format_datetime(target.last_result.created_at) %></td>
+      <td class="count"><%=h target.last_result.files_count %></td>
+      <td class="count"><%=h target.last_result.examples_count %></td>
+      <td class="count"><%=h target.last_result.expectations_count %></td>
+      <td class="count"><%=h target.last_result.failures_count %></td>
+      <td class="count"><%=h target.last_result.errors_count %></td>
       <td><%= public_link_result(target.last_result,"More") %></td>
 <% end -%>
     </tr>

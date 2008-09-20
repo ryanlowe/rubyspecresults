@@ -18,7 +18,7 @@ module ApplicationHelper
     return "" if datetime.nil?
     code  = "%b %d"
     code += " %Y" unless (Time.now.year == datetime.year)
-    code += " at %I:%M:%S %p"
+    code += " %I:%M:%S %p"
     datetime.strftime(code)
   end
   
