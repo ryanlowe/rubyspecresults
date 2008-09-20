@@ -29,16 +29,16 @@ table.bordered        { border-collapse:collapse; }
 
 /* page structure */
 
-#page { order:1px solid #eee;width:950px;position:relative;margin:1em auto;padding:0; }
-  #header       { margin-bottom:1em; }
-    #title      { font-size:30pt;font-weight:bold;ine-height:1; }
+#page            { width:950px;position:relative;margin:1em auto;padding:0; }
+  #header        { margin-bottom:1em; }
+    #title       { font-size:30pt;font-weight:bold;ine-height:1; }
       #title img { vertical-align:bottom;border:1px solid #600;display:inline-block; }
-    #top-right  { position:absolute;top:0;right:0; }
-  #tabs         {}
-    #tabs li    { font-size:12pt; }
-  #flash        { border:2px solid red;padding:0.5em;margin:1em 0; }
-  #content { order:1px solid #eee;margin:0;padding:1em 0;order-top:2px solid #ccc;border-bottom:1px solid #eee; }
-  #footer { color:#999;text-align:center;margin-top:0.5em;margin-bottom:8em; }
+    #top-right   { position:absolute;top:0;right:0; }
+  #tabs          { margin-bottom:0.5em; }
+    #tabs li     { font-size:12pt; }
+  #flash         { color:#320;border:2px solid #fe0;background-color:#ffe;padding:0.5em;margin:0.5em 0; }
+  #content       { margin:0;padding:0;padding-bottom:1em;border-bottom:1px solid #eee; }
+  #footer        { color:#999;text-align:center;margin-top:0.5em;margin-bottom:8em; }
   
 div#about     { width:500px; }
   div#about p { font-size:12pt; }
