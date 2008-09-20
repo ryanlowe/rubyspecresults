@@ -1,21 +1,23 @@
 <div>
   <table class="bordered">
     <tr class="header">
-      <td></td>
+      <td>Submitted</td>
       <td>Files</td>
       <td>Examples</td>
       <td>Expectations</td>
       <td>Failures</td>
       <td>Errors</td>
+      <td></td>
     </tr>
 <% for result in @target.results -%>
     <tr>
-      <td><%= public_link_result(result) %></td>
-      <td><%=h result.files_count %></td>
-      <td><%=h result.examples_count %></td>
-      <td><%=h result.expectations_count %></td>
-      <td><%=h result.failures_count %></td>
-      <td><%=h result.errors_count %></td>
+      <td><%=h format_datetime(result.created_at) %></td>
+      <td class="count"><%=h result.files_count %></td>
+      <td class="count"><%=h result.examples_count %></td>
+      <td class="count"><%=h result.expectations_count %></td>
+      <td class="count"><%=h result.failures_count %></td>
+      <td class="count"><%=h result.errors_count %></td>
+      <td><%= public_link_result(result,"More") %></td>
     </tr>
 <% end -%>
   </table>

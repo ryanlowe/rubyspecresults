@@ -37,8 +37,14 @@ class Target < ActiveRecord::Base
   end
   
   def platform
-    text = arch+" "+os
-    text += vm unless vm.nil? or vm.length < 1
+    text  = arch+" "+os
+    text += " (#{vm})" unless vm.blank?
+    text
+  end
+  
+  def implementation
+    text  = impl+" "+impl_version
+    text += " (#{vm})" unless vm.blank?
     text
   end
   

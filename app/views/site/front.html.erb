@@ -28,17 +28,14 @@
 <%   end -%>
     <tr>
       <td><%= link_profile(target.creator) %></td>
-      <td class="smaller">
-        <%=h target.impl %> <%=h target.impl_version %>
-<% unless target.vm.blank? -%>
-        (<%=h target.vm %>)
-<% end %>
+      <td>
+        <%= public_link_target(target,target.implementation) %>
       </td>
       <td><%=h target.ruby_version %></td>
 <% if target.last_result.nil? -%>
       <td colspan="7">&nbsp;</td>
 <% else -%>
-      <td class="smaller"><%=h format_datetime(target.last_result.created_at) %></td>
+      <td><%=h format_datetime(target.last_result.created_at) %></td>
       <td class="count"><%=h target.last_result.files_count %></td>
       <td class="count"><%=h target.last_result.examples_count %></td>
       <td class="count"><%=h target.last_result.expectations_count %></td>

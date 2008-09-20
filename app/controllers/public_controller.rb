@@ -1,5 +1,6 @@
 class PublicController < ApplicationController
-
+  helper :profile
+  
   def target
     @target = Target.find(params[:id])
     @title = @target.to_s
