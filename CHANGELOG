@@ -1,5 +1,6 @@
 
 Sep 20
+= change default time zone to UTC
 - front: submitted time
 = add Google Analytics
 - update footer in static files
