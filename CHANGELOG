@@ -1,5 +1,9 @@
 
+Sep 20
+- add information to the footer
+
 Sep 19
+- put lists in table form
 - front: group targets by os and arch
 - Target: optional VM/Runtime
 - Target: add impl version; use Ruby MRI version instead of RubySpec version (brixen)

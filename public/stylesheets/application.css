@@ -30,7 +30,7 @@ table.bordered        { border-collapse:collapse; }
   #tabs         {}
     #tabs li    { font-size:12pt; }
   #flash        { border:2px solid red;padding:0.5em;margin:1em 0; }
-  #content { order:1px solid #eee;margin:1em 0;padding:1em 0;order-top:2px solid #ccc;order-bottom:2px solid #ccc; }
-  #footer { text-align:center;margin-bottom:8em; }
+  #content { order:1px solid #eee;margin:0;padding:1em 0;order-top:2px solid #ccc;border-bottom:1px solid #eee; }
+  #footer { color:#999;text-align:center;margin-top:0.5em;margin-bottom:8em; }
   
 div.log {font-family:monospace;overflow:hidden;}
