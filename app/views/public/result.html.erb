@@ -9,6 +9,7 @@
   <%= @result.failures_count %> Failures<br/>
   <%= @result.errors_count %> Errors<br/>
 </p>
+<h2>Output Log</h2>
 <div class="log">
-  <%= EasyFormat.format(@result.log) %>
+  <%= EasyFormat.format(@result.log,true,120) %>
 </div>
