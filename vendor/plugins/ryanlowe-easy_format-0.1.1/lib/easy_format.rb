@@ -3,21 +3,37 @@ class EasyFormat
     '<span class="tab">&nbsp;</span>'
   end
   
-  def self.format(text, break_lines=true)
+  def self.format(text, break_lines=true, max_length=nil)
     return "" if text.nil?
     text = text.to_s
     text.strip!
     output = Array.new
     lines = text.split($/)
     for line in lines
+      original = String.new(line.strip)
       line = escape_html(line)
       line = replace_tabs(line)
       line.strip!
       line = link_urls(line)
+      line = split_max_length(line,max_length) if break_lines and (line == original)
       output.push(line)
     end
     connector = break_lines ? "<br/>\n" : " "
     output.join(connector)
+  end
+  
+  def self.split_max_length(line,max_length=nil)
+    return line if max_length.nil?
+    return line if line.nil? or line.length < 1
+    return line if line.length <= max_length
+    remainder = line
+    out = ""
+    while remainder.length > max_length
+      max = remainder[0,max_length]
+      remainder = remainder[max_length,remainder.length]
+      out += max+"<br/>\n"
+    end
+    out+remainder
   end
   
   def self.replace_tabs(line)

@@ -34,6 +34,40 @@ class EasyFormatTest < Test::Unit::TestCase
   end
   
   #
+  # max_length
+  #
+  
+  def test_split_max_length
+    assert_equal ".....", "."*5
+    
+    assert_equal "",  EasyFormat.split_max_length("",nil)
+    assert_equal nil, EasyFormat.split_max_length(nil,"")
+    
+    assert_equal "",                          EasyFormat.split_max_length("",10)
+    assert_equal "."*9,                       EasyFormat.split_max_length("."*9,10)
+    assert_equal "."*10,                      EasyFormat.split_max_length("."*10,10)
+    assert_equal "#{"."*10}<br/>\n#{"."*5}",  EasyFormat.split_max_length("."*15,10)
+    assert_equal "#{"."*10}<br/>\n#{"."*10}", EasyFormat.split_max_length("."*20,10)
+    assert_equal "#{"."*10}<br/>\n#{"."*10}<br/>\n#{"."*5}", EasyFormat.split_max_length("."*25,10)
+  end
+  
+  def test_max_length
+    assert_equal ".....", "."*5
+    
+    assert_equal "",                          EasyFormat.format("",true,10)
+    assert_equal "."*9,                       EasyFormat.format("."*9,true,10)
+    assert_equal "."*10,                      EasyFormat.format("."*10,true,10)
+    assert_equal "#{"."*10}<br/>\n#{"."*5}",  EasyFormat.format("."*15,true,10)
+    assert_equal "#{"."*10}<br/>\n#{"."*10}", EasyFormat.format("."*20,true,10)
+    assert_equal "#{"."*10}<br/>\n#{"."*10}<br/>\n#{"."*5}", EasyFormat.format("."*25,true,10)
+  end
+  
+  def test_max_length_mixed
+    assert_equal "Check out this log:<br/>\n<br/>\n#{"."*50}<br/>\n#{"."*25}", EasyFormat.format("Check out this log:\n\n#{"."*75}",true,50)
+    assert_equal "#{"."*50}<br/>\n#{"."*25}<br/>\n<br/>\nis the log",  EasyFormat.format("#{"."*75}\n\nis the log",true,50)
+  end
+  
+  #
   # tabs
   # 
   
