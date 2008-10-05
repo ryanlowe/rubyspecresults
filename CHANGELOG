@@ -1,4 +1,7 @@
 
+Oct 5
+- allow submission of results via hash API with secret token
+
 Sep 20
 - limit line length for results logs
 - use yellow for flash messages

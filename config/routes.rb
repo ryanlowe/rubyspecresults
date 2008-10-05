@@ -7,6 +7,11 @@ ActionController::Routing::Routes.draw do |map|
     site.about   '/about', :action => 'about'
   end
   
+  #api
+  map.with_options :controller => "api" do |api|
+    api.connect '/api/add/result',  :action => 'result'
+  end
+  
   #account
   map.with_options :controller => "account" do |account|
     account.connect '/account', :action => 'index'
